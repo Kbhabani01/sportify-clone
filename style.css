@@ -24,6 +24,11 @@ body {
 .sidebar .logo img {
     width: 130px;
 }
+.sidebar .logo .text{
+    font-size: 2vh;
+    margin-left: 80px;
+}
+
 
 /* Responsive Sidebar */
 @media (max-width: 768px) {
