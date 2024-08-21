@@ -34,10 +34,15 @@ body {
 @media (max-width: 768px) {
     .sidebar {
         width: 60px;
+        padding: 12px;
     }
 
     .sidebar .logo img {
         width: 40px;
+    }
+
+    .sidebar .logo .text {
+        display: none;
     }
 
     .sidebar .navigation ul li a span {
@@ -110,12 +115,37 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .main-container {
+        margin-left: 60px;
+        padding: 10px;
+    }
+}
+
 .topbar {
     display: flex;
     justify-content: space-between;
     background-color: #000;
     padding: 14px 30px;
     align-items: center;
+}
+
+/* Responsive Topbar */
+@media (max-width: 768px) {
+    .topbar {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topbar .navbar {
+        margin-top: 10px;
+    }
 }
 
 .topbar .prev-next-buttons button {
@@ -142,6 +172,21 @@ body {
 
 .topbar .navbar ul {
     list-style: none;
+}
+
+/* Adjust navbar for smaller screens */
+@media (max-width: 768px) {
+    .topbar .navbar ul li {
+        width: auto;
+        margin: 0px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topbar .navbar ul li {
+        width: 100%;
+        margin: 5px 0;
+    }
 }
 
 .topbar .navbar ul li {
@@ -177,6 +222,14 @@ body {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Adjust button for smaller screens */
+@media (max-width: 768px) {
+    .topbar .navbar button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
 .topbar .navbar button:hover {
     background-color: #e0e0e0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -186,10 +239,46 @@ body {
     padding: 20px 40px;
 }
 
+/* Adjust playlists for smaller screens */
+@media (max-width: 768px) {
+    .spotify-playlists {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .spotify-playlists {
+        padding: 10px 15px;
+    }
+}
+
 .spotify-playlists h2 {
     color: #ffffff;
     font-size: 22px;
     margin-bottom: 20px;
+}
+
+/* Adjust playlist items for smaller screens */
+@media (max-width: 768px) {
+    .spotify-playlists .list {
+        flex-direction: column;
+    }
+
+    .spotify-playlists .list .item {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .spotify-playlists .list {
+        gap: 10px;
+    }
+
+    .spotify-playlists .list .item {
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 .spotify-playlists .list {
@@ -260,6 +349,25 @@ body {
 .spotify-playlists hr {
     margin: 70px 0px 0px;
     border-color: #636363;
+}
+
+/* Adjust preview for smaller screens */
+@media (max-width: 768px) {
+    .preview {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .preview {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .preview button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
 
 .preview {
